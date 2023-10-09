@@ -18,6 +18,10 @@ namespace fre::bsm {
 			double f = 0; //!!! implement this
 			double s = 0; //!!! implement this
 
+			R = std::exp(r * t);
+			f = R * S0;
+			s = σ * std::sqrt(t);
+
 			return fre::black::put::value(f, s, k)/R;
 		}
 	}
